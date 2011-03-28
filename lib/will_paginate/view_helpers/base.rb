@@ -106,7 +106,7 @@ module WillPaginate
           b  = eb = ''
           sp = ' '
         end
-        
+         
         no = options[:no] || "No";
         found = options[:found] || "found";
         of =  options[:of] || "of";
