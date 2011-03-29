@@ -112,12 +112,13 @@ module WillPaginate
         of =  options[:of] || "of";
         displaying = options[:displaying] || "Displaying";
         in_total = options[:in_total] || "in total";
+        all = options[:all] || "all";
       
         if collection.total_pages < 2
           case collection.size
           when 0; "#{no} #{plural_name} #{found}"
           when 1; "#{displaying} #{b}1#{eb} #{entry_name}"
-          else;   "#{displaying} #{b}all #{collection.size}#{eb} #{plural_name}"
+          else;   "#{displaying} #{b}#{all} #{collection.size}#{eb} #{plural_name}"
           end
         else
           %{#{displaying} #{plural_name} #{b}%d#{sp}-#{sp}%d#{eb} #{of} #{b}%d#{eb} #{in_total}} % [
